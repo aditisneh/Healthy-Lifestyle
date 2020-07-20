@@ -123,44 +123,24 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
-.flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 80px 500px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.rd:hover{
+  transition: transform .2s;
+     transform: scale(1.098);
 }
 
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+  padding: 20px 0;
+  font-size: 30px;
 }
 </style>
 </head>
@@ -238,19 +218,18 @@ function newElement() {
   }
 }
 </script>
-<h1>3D Flip Box (Horizontal)</h1>
-<h3>Hover over the box below:</h3>
 
-<div class="flip-box">
-  <div class="flip-box-inner">
-    <div class="flip-box-front">
-      <h2>Front Side</h2>
-    </div>
-    <div class="flip-box-back">
-      <h2>Back Side</h2>
-    </div>
-  </div>
+<h1>Road-map : How to start and end a day?</h1>
+
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div class="rd">4</div>
+  <div class="rd">5</div>
+  <div class="rd">6</div>  
 </div>
+
 
 </body>
 </html>
