@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			font-family:'Lato', sans-serif;
+		}
+	.overlay{
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color:black;
+		opacity: 0.9;
+		overflow-x: hidden;
+		transition: 0.5s;
+	}
+
+	.overlay-content{
+
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+        margin-top: 30px;
+	}
+	.overlay a{
+		padding: 8px;
+		text-decoration: none;
+		font-size: 36px;
+		color: grey;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.overlay a:hover, .overlay a:focus{
+		color: white;
+		 transition: transform .2s;
+		 transform: scale(1.5);
+	}
+
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 35px;
+		font-size: 60px;
+	}
+
+	@media screen and (max-height: 450px;){
+		.overlay a{font-size: 20px}
+		.overlay .closebtn{
+			font-size: 40px;
+			top: 15px;
+			right: 5px;
+		}
+	}
+	h1,h3{
+	  position: center;
+	  background-color: grey;
+	}
+	body{
+	margin: 0;
+	font-family: Arial, Helvetica , sans-serif;
+	}
+	.yoga-image{
+		background-image: url('C:/Users/HP/OneDrive/Documents/GitHub/Healthy-Lifestyle/d2.jpg');
+		background-color: #cccccc;
+		height: 800px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	.yoga-text{
+		text-align: center;
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    color: white;
+	}
+	.modal{
+			display: none;
+			position: fixed;
+			z-index: ;
+			left: 0;
+			width: 0%
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0 0 0 0.4);
+			-webkit-animation-name: fadeIn;
+			-webkit-animation-duration: 0.4s;
+			animation-name: fadeIn;
+			animation-duration: 0.4s;
+		}
+       
+       .model-content{
+       	position: fixed;
+       	bottom: 0;
+       	background-color: #fefefe;
+       	width: 100%;
+       	-webkit-animation-name: slideIn;
+       	-webkit-animation-duration:0.4s;
+       	animation-name: slideIn;
+       	animation-duration:0.4s;
+       }
+       .close{
+       	color: white;
+       	float: right;
+       	font-size: 28px;
+       	font-weight: bold;
+       }
+       .close:hover,.close:focus{
+       	color: #000;
+       	text-decoration: none;
+       	cursor: pointer;
+       }
+
+       .modal-header{
+       	padding: 2px 16px;
+       	background-color: #5cb85c;
+       	color: white;
+       	opacity: 1;
+       }
+
+       .modal-body{
+       	color: white;
+       	padding: 2px 16px;
+       	opacity: 1;
+       }
+       #myBtn{
+        height: 50px;
+        width: 200px;
+        font-size: 25px;
+       }
+       .modal-footer{
+       	padding: 2px 16px;
+       	background-color: #5cb85c;
+       	color: white;
+       	opacity: 1;
+       }
+       @-webkit-keyframes slideIn{
+       	from{bottom: -300px; opacity: 0}
+       	to{bottom: 0;opacity:1;}
+       }
+       @-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
+	/*#bgimg{
+		background-image: url('C:/Users/HP/OneDrive/Documents/GitHub/Healthy-Lifestyle/download.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+	}*/
+	</style>
+	<title>Yoga Life</title>
+</head>
+<body>
+<div id="myNav" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+		<a href="foryou.html">A Timetable for you</a>
+		<a href="disease.html">Check Solution to your Disease</a>
+		<a href="chatbot.html">Chat with me for help</a>
+
+	<button id="myBtn">Todays Tip</button>
+     <div id="myModal" class="modal">
+     	
+     	<div class="modal-content">
+     		<div class="modal-header">
+     			<span class="close">&times;</span>
+     			<h2>Today's Myth Buster-Eggs are bad for your heart</h2>
+     		</div>
+     		<div class="modal-body">
+     			<p>How? For most of us the cholesterol we eat-in eggs or any other food-doesn't have a huge impact on raising our blood cholesterol; the body simply compensates by manufacturing less cholesterol itself. The chief heart-disease culprits are "saturated and trans fats, which have much greater impact on raising blood cholesterol," notes Kris-Etherton. </p>
+     		</div>
+     		<div class="modal-footer">
+     			<h3>Stay Home, Stay Safe!</h3>
+     		</div>
+     	</div>
+     </div>
+     <script>
+     	var modal = document.getElementById("myModal");
+
+         var btn = document.getElementById("myBtn");
+         var span = document.getElementsByClassName("close")[0];
+
+         btn.onclick = function() {
+            modal.style.display = "block";
+             }
+         span.onclick = function() {
+         	modal.style.display = "none";}
+
+         	window.onclick = function(event){
+         		if(event.target == modal){
+         			modal.style.display = "none";
+         		}
+         	}
+     </script>
+
+</body>
+</html>
+    </div>
+</div>
+<div class="yoga-image">
+	<div class="yoga-text">
+		<h1 style="font-size: 50px">Healthy Lifestyle</h1>
+		<h3>Don't wait just get started!</h3>
+		<button><span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; Get Started</span>
+</button>
+	</div>
+	
+</div>
+
+
+
+
+
+<script>
+	function openNav(){
+		document.getElementById("myNav").style.width = "100%";
+	}
+	function closeNav(){
+		document.getElementById("myNav").style.width = "0%";
+	}
+</script>
+
+</body>
+</html>
